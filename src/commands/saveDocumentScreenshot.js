@@ -6,6 +6,7 @@ import saveBase64Image from '../utils/saveBase64Image';
  * @alias browser.saveDocumentScreenshot
  * @param {string=} fileName
  * @param {Object=} options
+ * @param {Object=} driver
  */
 
 // Note: function name must be async to signalize WebdriverIO that this function returns a promise

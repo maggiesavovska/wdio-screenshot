@@ -32,5 +32,5 @@ export {
   makeViewportScreenshot,
   saveDocumentScreenshot,
   saveElementScreenshot,
-  saveViewportScreenshot
+  saveViewportScreenshot,
 };
