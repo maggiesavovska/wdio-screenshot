@@ -9,7 +9,7 @@ import saveBase64Image from '../utils/saveBase64Image';
  */
 
 // Note: function name must be async to signalize WebdriverIO that this function returns a promise
-export default async function async(fileName, options) {
+export default async function async(fileName, driver, options) {
 
   if (_.isPlainObject(fileName) && _.isUndefined(options)) {
     options = fileName;
@@ -17,7 +17,7 @@ export default async function async(fileName, options) {
   }
 
   // make screenshot of area
-  const base64Image = await makeDocumentScreenshot(this, options);
+  const base64Image = await makeDocumentScreenshot(driver, options);
 
   if (typeof fileName !== 'undefined') {
     // store base64 image as real png
