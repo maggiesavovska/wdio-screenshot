@@ -8,20 +8,6 @@
     "src",
     "lib"
   ],
-  "scripts": {
-    "clean-lib": "rimraf lib",
-    "clean-tmp": "rimraf .tmp",
-    "clean": "npm run clean-lib && npm run clean-tmp",
-    "build": "npm run clean && babel ./src -d lib",
-    "test": "npm run clean && mocha --compilers js:babel-register --timeout 15000 --recursive test/unit",
-    "test:local": "npm run clean && wdio ./test/integration/wdio.local-conf.js",
-    "test:sauce": "npm run clean && wdio ./test/integration/wdio.sauce-conf.js",
-    "test:appveyor": "npm run clean && wdio ./test/integration/wdio.appveyor-conf.js",
-    "server": "http-server test/fixture/web -p 3000",
-    "deploy-integration-tests": "gh-pages -d test/fixture/web",
-    "prepublish": "npm run build",
-    "release": "np"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zinserjan/wdio-screenshot"
